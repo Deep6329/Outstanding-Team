@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI_Welcome.unity
     guid: 45aded4dbec00b74b9d2d77917afb668
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Walker.unity
     guid: 25d1c78f2f24a4a4f890d706bc3d2712
+  - enabled: 1
+    path: Assets/Scenes/LEVEL_1.unity
+    guid: c1c7eca80554ca1498ac25c7bb612ac3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
