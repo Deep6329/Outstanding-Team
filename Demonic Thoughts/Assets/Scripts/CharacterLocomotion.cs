@@ -30,6 +30,10 @@ public class CharacterLocomotion : MonoBehaviour
         }
     }
 
+    public void SetVelocity(Vector2 boost)
+    {
+        m_Rigidbody.linearVelocity = new Vector3(boost.x, 0.0f, boost.y);
+    }
 
 
     void Update()

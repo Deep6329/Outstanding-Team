@@ -1,8 +1,9 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterLocomotion))]
-public class EnemyBehavioour : MonoBehaviour
+public class EnemyBehavioour1 : MonoBehaviour
 {
 
     CharacterLocomotion m_Locomotion;
@@ -11,6 +12,8 @@ public class EnemyBehavioour : MonoBehaviour
     public bool isAsleep = false;
     public float moveSpeed = 1.0f;
     public float targettingRadius = 10.0f;
+    public float dashTimeout = 2.5f;
+    private float dashCurrTimeout = 0.0f;
 
     private void Awake()
     {
@@ -28,14 +31,17 @@ public class EnemyBehavioour : MonoBehaviour
         {
             Vector3 tPos = m_Target.position;
             Vector3 cPos = transform.position;
+            dashCurrTimeout -= Time.deltaTime;
             if (Vector3.Distance(tPos, cPos) < targettingRadius)
             {
-                Vector2 diff = new Vector2(tPos.x - cPos.x, tPos.z - cPos.z);
-                diff.Normalize();
-                m_Locomotion.groundMove = diff * moveSpeed;
-            }else
-            {
-                m_Locomotion.groundMove = Vector3.zero;
+                
+                if (dashCurrTimeout < 0.0f)
+                {
+                    dashCurrTimeout = dashTimeout;
+                    Vector2 diff = new Vector2(tPos.x - cPos.x, tPos.z - cPos.z);
+                    diff.Normalize();
+                    m_Locomotion.SetVelocity(diff * moveSpeed);
+                }
             }
         }
     }
