@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 [RequireComponent (typeof(CharacterLocomotion))]
 public class PlayerBehaviour : MonoBehaviour
 {
-
+    public static bool Flipped = false;
     CharacterLocomotion m_Locomotion;
     InputSystem_Actions m_Input;
     public BobbleHead m_BobbleHead;
@@ -23,6 +23,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Awake()
     {
+        Flipped = false;
         m_Locomotion = GetComponent<CharacterLocomotion>();
         m_SpringJoint = GetComponent<SpringJoint>();
         m_Input = new InputSystem_Actions();
@@ -43,6 +44,8 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         m_MoveInput = m_Input.Player.Move.ReadValue<Vector2>();
+        m_MoveInput.y *= Flipped ? -1.0f : 1.0f;
+        m_MoveInput.x *= Flipped ? -1.0f : 1.0f;
         m_Locomotion.groundMove = m_MoveInput * moveSpeed;
         m_BodyAnimator.SetBool("Running", m_MoveInput.magnitude > 0.01f);
     }
