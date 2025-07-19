@@ -590,6 +590,7 @@ GameObject:
   - component: {fileID: 424163463}
   - component: {fileID: 424163465}
   - component: {fileID: 424163464}
+  - component: {fileID: 424163466}
   m_Layer: 5
   m_Name: title_Options
   m_TagString: Untagged
@@ -715,6 +716,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424163462}
   m_CullTransparentMesh: 1
+--- !u!114 &424163466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424163462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17341b510cd97944e994d6c9a12de561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 709318540}
+  fadeDuration: 1
 --- !u!1 &425284249
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +936,7 @@ MonoBehaviour:
 
     Rosalie
 
-    Deep'
+    Prabhdeep'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3571,6 +3586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1246816689}
+  - component: {fileID: 1246816690}
   m_Layer: 5
   m_Name: pnl_Start
   m_TagString: Untagged
@@ -3604,6 +3620,20 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 0}
   m_SizeDelta: {x: 384, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1246816690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246816688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17341b510cd97944e994d6c9a12de561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 709318540}
+  fadeDuration: 1
 --- !u!1 &1254945213
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +4647,7 @@ GameObject:
   - component: {fileID: 1889500471}
   - component: {fileID: 1889500470}
   - component: {fileID: 1889500469}
+  - component: {fileID: 1889500472}
   m_Layer: 5
   m_Name: btn_close
   m_TagString: Untagged
@@ -4750,6 +4781,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889500467}
   m_CullTransparentMesh: 1
+--- !u!114 &1889500472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889500467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17341b510cd97944e994d6c9a12de561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 709318540}
+  fadeDuration: 1
 --- !u!1 &1889985082
 GameObject:
   m_ObjectHideFlags: 0
@@ -5144,7 +5189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 709318540}
-  fadeDuration: 0.66
+  fadeDuration: 1
 --- !u!1 &2024026591
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,6 +5365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2061622678}
   - component: {fileID: 2061622679}
+  - component: {fileID: 2061622680}
   m_Layer: 5
   m_Name: tgl_fullScreenSwitch
   m_TagString: Untagged
@@ -5408,6 +5454,20 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 1
+--- !u!114 &2061622680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061622677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17341b510cd97944e994d6c9a12de561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasGroup: {fileID: 709318540}
+  fadeDuration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
