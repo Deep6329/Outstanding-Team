@@ -4,20 +4,26 @@ using UnityEngine.UI;
 
 public class UI_Controll : MonoBehaviour
 {
-    [SerializeField] GameObject sld_music_Volume;
-    [SerializeField] AudioSource m_AudioSource;
-    private Slider sld_music_Vol_GO;
+    [Header("Music Volume")]
+    [SerializeField] Slider sld_music_Volume;
+    [SerializeField] AudioSource m_AudioSourceMusic;
+    //private Slider sld_music_Vol_GO;
     private float sld_music_Vol_Float;
 
-    private void Start()
-    {
-        sld_music_Vol_GO = sld_music_Volume.GetComponent<Slider>();
-    }
+    [Header("Sound Volume")]
+    [SerializeField] Slider sld_sound_Volume;
+    [SerializeField] AudioSource m_AudioSourceSound;
+    //private Slider sld_sound_Vol_GO;
+    private float sld_sound_Vol_Float;
+
+    [Header("Toggle Full Screen")]
+    [SerializeField] Toggle m_toggleFullscreen;
+
     private void Update()
     {
-        sld_music_Vol_Float = sld_music_Vol_GO.value;
+        sld_music_Vol_Float = sld_music_Volume.value;
+        sld_sound_Vol_Float = sld_sound_Volume.value;        
     }
-
     public void LoadStartingScene()
     {
         SceneManager.LoadScene(1);
@@ -30,7 +36,24 @@ public class UI_Controll : MonoBehaviour
 
     public void SetBackgroundVolume()
     {
-        Debug.Log("Slider Value: " + sld_music_Vol_Float);
-        m_AudioSource.volume = sld_music_Vol_Float;
+        m_AudioSourceMusic.volume = sld_music_Vol_Float;
+    }
+
+    public void SetSoundVolume()
+    {
+        m_AudioSourceSound.volume = sld_sound_Vol_Float;
+    }
+
+    public void ToggleFullScreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+        //if (m_toggleFullscreen.isOn)
+        //{
+
+        //}
+        //else
+        //{
+
+        //}
     }
 }
